@@ -11,7 +11,9 @@ export function Pizza({ pizza }: { pizza: PizzaModel }) {
       <div className="flex flex-col gap-3">
         <div className="flex flex-1 flex-col">
           <span className="inline-flex text-lg">{pizza.name}</span>
-          <p className="text-gray-400 text-sm line-clamp-3">{pizza.ingredients}</p>
+          <p title={pizza.ingredients} className="text-gray-400 text-sm line-clamp-3">
+            {pizza.ingredients}
+          </p>
         </div>
         <p className="inline-flex">{pizza.price}</p>
       </div>
