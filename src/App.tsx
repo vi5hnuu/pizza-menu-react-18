@@ -14,12 +14,16 @@ function App() {
         - Fast react pizza co. -
       </header>
       <Menu pizzas={pizzaList} />
-      <footer className="text-center mt-16 flex flex-col justify-center items-center gap-4">
-        <p>We're open untill 22:00. Come visit us or order online.</p>
-        <button className="bg-warm-gold rounded-md px-4 py-2 hover:scale-[1.01] hover:-translate-y-0.5 transition-all">
-          Order Now
-        </button>
-      </footer>
+      {pizzaList.length ? (
+        <footer className="text-center mt-16 flex flex-col justify-center items-center gap-4">
+          <p>We're open untill 22:00. Come visit us or order online.</p>
+          <button className="bg-warm-gold rounded-md px-4 shadow-sm py-2 hover:scale-[1.01] hover:-translate-y-0.5 transition-all">
+            Order Now
+          </button>
+        </footer>
+      ) : (
+        <p className="text-lg text-center text-gray-400 font-bold">No Pizzas Found</p>
+      )}
     </>
   );
 }
